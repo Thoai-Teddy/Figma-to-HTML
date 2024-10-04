@@ -50,6 +50,23 @@ a {
   background: #171100;
 }
 
+/* Nếu nd quá nhiều thì hiển thị 1 dòng rồi ... */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Nếu nd quá nhiều thì hiển thị 2 dòng rồi ... */
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
 /* ===============Header================ */
 .header {
   background: #fffcf4;
@@ -323,6 +340,9 @@ a {
 }
 
 .popular .course-item {
+  /* Nếu mà nd quá nhiều thì xử lý như này */
+  flex: 1;
+
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
