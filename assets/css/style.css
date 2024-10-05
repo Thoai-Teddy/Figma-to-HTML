@@ -424,8 +424,16 @@ a {
   background: #2e2100;
 }
 
-.feedback .feedback-item {
+/* Làm cho 3 feedback chỉ xuất hiện mỗi cái 1 thời điểm */
+.feedback .feedback-list {
   display: flex;
+  overflow: hidden;
+}
+
+.feedback .feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .feedback-item .avatar {
